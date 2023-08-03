@@ -1,6 +1,7 @@
 interface Eat{
     // trong đây có thể có các biến nhưng là biến hằng
-    public abstract void eat();
+    void jump();
+    abstract void eat();
     public abstract void eatDragonFruit();
 }
 
@@ -79,6 +80,11 @@ class Person implements Eat, Walk, Sleep {
     public void eatDragonFruit() {
         System.out.println("Eating DragonFruit...");
     }
+
+    @Override
+    public void jump() {
+        System.out.println("Jumping...");
+    }
 }
 
 public class interface_learn {
@@ -92,5 +98,6 @@ public class interface_learn {
         p.sleep();
         p.eat();
         p.eatDragonFruit();
+        p.jump();
     }    
 }
